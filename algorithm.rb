@@ -1,7 +1,6 @@
 #Run ruby code with command "ruby filename.rb"
 #At line no. 25 pass different string to check code with different argumnets
 
-
 require 'rspec'
 def add(numbers)
   begin
@@ -23,24 +22,6 @@ def add(numbers)
 end
 
 add("3, 5, 7")
-
-
-class Foo
-  def add(numbers)
-  begin
-    unless numbers.is_a? String
-      p "hello"
-      raise "Input is Invalid" 
-    end
-    input = numbers.split(/\D/)
-    p input 
-    result = input.map(&:to_i).sum
-    p "Output: #{result}"
-  rescue StandardError => e
-    p e.message
-  end  
-  end
-end
 
 
 # Rspec
